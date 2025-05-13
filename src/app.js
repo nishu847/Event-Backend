@@ -11,7 +11,7 @@ CORS is used for cross origin and proxies are set in it';.
 origin= to know from where thedata or url is coming
 */
 app.use(cors({
-    origin: 'https://campussphere.netlify.app/', // Replace with your frontend URL
+    origin: 'https://campussphere.netlify.app', // Replace with your frontend URL
   credentials: true, // Allow credentials (cookies, authorization headers)
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
 }))

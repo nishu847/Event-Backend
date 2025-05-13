@@ -19,3 +19,6 @@ connectDB().then(()=>{
     console.log("FAILED CONNECTION: ",err)
 })
 
+app.get('/', (req, res) => {
+  res.send('Event Backend is running!');
+});

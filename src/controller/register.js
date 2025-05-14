@@ -168,6 +168,7 @@ const logoutUser=asynchandler(async(req,res)=>{
     sameSite: 'None', // Allow cross-origin requests
 
   }
+  console.log("req.user",req.user);
   const user=await User.findByIdAndUpdate(req.user._id,{isLoggedin:false})
   console.log("user after log out: ",user)
   res.status(200).clearCookie("accessToken",options).clearCookie("refreshToken",options).json(new ApiResponse(200,{},"User Successfully logged out"))

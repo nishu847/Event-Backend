@@ -28,6 +28,8 @@ export const verifyJWT = asynchandler(async (req, res, next) => {
 
     // Attach user to request object
     req.user = user;
+console.log("Cookies:", req.cookies);
+console.log("User in auth middleware:", req.user);
 
     // Proceed to the next middleware or route handler
     next();

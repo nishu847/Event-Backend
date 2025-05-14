@@ -7,7 +7,8 @@ router.route("/register").post(registerUser)
 router.route("/login").post(loginUser)
 router.route("/forgotpassword").post(forgotPassword)
 router.route("/resetpassword").post(resetPassword)
-router.route("/logout").post(logoutUser)
+router.route("/logout").post(verifyJWT,logoutUser)
 router.put("/:userId", updateUsername);
 router.get("/:userId/events", getEvent);
 export default router
+ 

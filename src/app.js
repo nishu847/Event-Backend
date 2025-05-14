@@ -12,8 +12,8 @@ origin= to know from where thedata or url is coming
 */
 app.use(cors({
     origin: 'https://campussphere.netlify.app', // Replace with your frontend URL
-  credentials: true, // Allow credentials (cookies, authorization headers)
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
+  credentials: true// Allow credentials (cookies, authorization headers)
+  // Allow specific HTTP methods
 }))
 // jab data aata h khi se to agr wo json format me h to hume use accept krna hoga (configure).
 // Limit is used to tell the user the max. amount of json jo ki accept hoga humare server me

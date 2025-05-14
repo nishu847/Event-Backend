@@ -97,7 +97,8 @@ const loginUser = asynchandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
-    secure: true, // Set to true if you're using HTTPS
+     secure: process.env.NODE_ENV === "production", // false for localhost, true on Netlify
+  sameSite: "None", 
   };
 
   return res.status(200)

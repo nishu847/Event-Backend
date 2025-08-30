@@ -18,11 +18,11 @@ app.use(cors({
 // jab data aata h khi se to agr wo json format me h to hume use accept krna hoga (configure).
 // Limit is used to tell the user the max. amount of json jo ki accept hoga humare server me
 // limit dena zroori h kyuki agr unlimited aaya---- to site crash ho skti h 
-app.use(express.json())
+app.use(express.json({ limit: "16kb" })); 
 
 // urlencoded ko use kiya jaata h url ki formatting ke liye mtlb----- humb browser pr likhte h "nishu sharma.com" ---------> "nishu%20%sharma.com"
 // ye url encoder ka kaam h 
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 
 
 //static is used to configure the static files of the public folder (or any other given) eg. HTML ,CSS, PDF files etc.
